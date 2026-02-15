@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background: #f4f1ea;
+  font-family: Georgia, serif;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.overlay button {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  background: #d4af37;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.overlay button:hover {
+  background: #b8962e;
+}
+
+/* Museum layout */
+.museum {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+
+.room {
+  min-width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #f8f5ef, #e8e3d9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.room::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 200px rgba(0,0,0,0.3);
+}
+
+/* Frames */
+.frame {
+  background: white;
+  padding: 15px;
+  border: 8px solid #c5a880;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease;
+}
+
+.frame.large {
+  transform: scale(1.2);
+}
+
+.frame img {
+  max-height: 60vh;
+  display: block;
+}
+
+.caption {
+  margin-top: 10px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Intro & Final */
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.final h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
